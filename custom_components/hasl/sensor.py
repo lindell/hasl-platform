@@ -442,6 +442,7 @@ class SLStatusSensor(Entity):
 
             _LOGGER.info("TL2 update completed for %s...", self._name)
 
+
 class SLDeparturesSensor(Entity):
     """Departure board for one SL site."""
 
@@ -745,7 +746,9 @@ class SLDeparturesSensor(Entity):
                                     'departure': displaytime,
                                     'destination': destination,
                                     'time': diff,
-                                    'expected': datetime.datetime.strptime(expected, '%Y-%m-%dT%H:%M:%S'),
+                                    'expected': datetime.datetime.strptime(
+                                        expected, '%Y-%m-%dT%H:%M:%S'
+                                    ),
                                     'type': traffictype,
                                     'groupofline': groupofline,
                                     'icon': icon,
